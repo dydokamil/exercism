@@ -28,27 +28,7 @@ class WordProblem {
   }
 
   answer() {
-    const equationSplit = this.questionParsed.split(' ')
-    let sum = parseInt(equationSplit[0])
-
-    for (let i = 1; i < equationSplit.length - 1; i++) {
-      switch (equationSplit[i]) {
-        case '+':
-          sum += parseInt(equationSplit[i + 1], 10)
-          break
-        case '-':
-          sum -= parseInt(equationSplit[i + 1], 10)
-          break
-        case '/':
-          sum /= parseInt(equationSplit[i + 1], 10)
-          break
-        case '*':
-          sum *= parseInt(equationSplit[i + 1], 10)
-          break
-      }
-    }
-
-    return sum
+    return eval(this.questionParsed)
   }
 }
 class ArgumentError extends Error {

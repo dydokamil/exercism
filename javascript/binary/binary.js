@@ -4,7 +4,6 @@ function Binary(number) {
 
 Binary.prototype.toDecimal = function() {
   if (!/^[0-1]+$/.test(this.number)) return 0
-  // return parseInt(this.number, 2)
 
   return this.number
     .split('')
