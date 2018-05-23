@@ -4,7 +4,7 @@ class Trinary {
   }
 
   toDecimal() {
-    if (!this.code.match(/[0-9]/g)) return 0
+    if (this.code.match(/[^0-2]/g)) return 0
 
     return this.code
       .split('')
